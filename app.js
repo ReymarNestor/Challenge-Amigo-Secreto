@@ -6,5 +6,8 @@ let listaAmigos = [];
 //Función que agrega amigos a la lista
 
 function agregarAmigo () {
-    let nombreAgregado = document.querySelector
+    let nombreAgregado = document.getElementById('amigo');
+    listaAmigos.push(nombreAgregado);
+    console.log(listaAmigos);
 }
+
