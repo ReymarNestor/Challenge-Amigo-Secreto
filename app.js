@@ -13,10 +13,27 @@ function agregarAmigo () {
         listaAmigos.push(nombreAgregado);
     }
     limpiarInput();
+    mostrarLista();
     console.log(listaAmigos);
 }
 
 //Función que deja vacio el input despues de agregar un nombre válido
 function limpiarInput () {
     document.querySelector('#amigo').value = '';
+}
+
+//Función que muestra en pantalla la lista de amigos agregados
+
+function mostrarLista () {
+    let lista = document.querySelector('#listaAmigos');
+    lista.innerHTML = generarLista();
+}
+
+//Función que generara la lista
+function generarLista() {
+    let elementoLi= `<li>${listaAmigos[0]}</li>`;
+    for (let i = 1; i < listaAmigos.length; i++) {
+        elementoLi += `<li>${listaAmigos[i]}</li>`; 
+    }
+    return elementoLi
 }
