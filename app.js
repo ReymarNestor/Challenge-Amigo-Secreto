@@ -37,3 +37,11 @@ function generarLista() {
     }
     return elementoLi
 }
+
+//Función que sortea un numero para elegir un Amigo
+function sortearAmigo() {
+    let numeroAleatorio = Math.floor(Math.random()*listaAmigos.length);
+    let nombreSorteado = document.getElementById('resultado');
+    console.log(numeroAleatorio);
+    nombreSorteado.innerHTML = listaAmigos[numeroAleatorio];
+}
