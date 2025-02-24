@@ -40,8 +40,12 @@ function generarLista() {
 
 //Función que sortea un numero para elegir un Amigo
 function sortearAmigo() {
-    let numeroAleatorio = Math.floor(Math.random()*listaAmigos.length);
-    let nombreSorteado = document.getElementById('resultado');
-    console.log(numeroAleatorio);
-    nombreSorteado.innerHTML = listaAmigos[numeroAleatorio];
+    if (listaAmigos.length < 2){
+        alert('Por favor introduzca al menos el nombre de dos amigos.')
+    } else {
+        let numeroAleatorio = Math.floor(Math.random()*listaAmigos.length);
+        let nombreSorteado = document.getElementById('resultado');
+        console.log(numeroAleatorio);
+        nombreSorteado.innerHTML = `El amigro secreto sorteado es: ${listaAmigos[numeroAleatorio]}`;
+    }
 }
